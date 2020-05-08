@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="MATLLAB学习日志（一）"><meta name="keywords" content=""><meta name="author" content="Yindc"><meta name="copyright" content="Yindc"><meta name="theme-color" content="#0078E7"><title>MATLLAB学习日志（一） | francc!!</title><link rel="shortcut icon" href="/jk.svg"><link rel="mask-icon" href="/jk.svg" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script id="yun-config">
+    let Yun = window.Yun || {};
+    let CONFIG = {"root":"/","title":"路过的空虚假面","version":"0.6.1","anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
+  </script><script src="//at.alicdn.com/t/font_1140697_n3htx7s57pp.js" async></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><meta name="generator" content="Hexo 4.2.0"></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle sidebar-toggle-fixed hty-icon-button"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><aside class="sidebar"><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc sidebar-nav-active hty-icon-button" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about" title="Yindc"><img loading="lazy" src="/aa12.png" alt="Yindc"></a><div class="site-author-name"><a href="/about/">Yindc</a></div><a class="site-name" href="/about/site.html">francc!!</a><sub class="site-subtitle"></sub><div class="site-desciption"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item site-state-posts"><a href="/archives" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">9</span></a></div><a class="site-state-item hty-icon-button" href="/%E7%A2%8E%E7%A2%8E%E5%BF%B5" title="碎碎念"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-settings-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&amp;uin=752321981&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/y752321981" title="GitHub" target="_blank" style="color:#181717"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:752321981@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.acfun.cn/u/871327" title="ACFUN" target="_blank" style="color:#fd0101"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-send-plane-2-line"></use></svg></a></div></div><script defer src="/js/sidebar.js"></script><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#工作空间与使用帮助"><span class="toc-number">1.</span> <span class="toc-text">工作空间与使用帮助</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本运算"><span class="toc-number">2.</span> <span class="toc-text">基本运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#书写向量（vectors）与矩阵（matrices）"><span class="toc-number">2.1.</span> <span class="toc-text">书写向量（vectors）与矩阵（matrices）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间与日期"><span class="toc-number">2.2.</span> <span class="toc-text">时间与日期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加法与减法（addition-and-subtraction"><span class="toc-number">2.3.</span> <span class="toc-text">加法与减法（addition and subtraction)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#乘法（multiplication）"><span class="toc-number">2.4.</span> <span class="toc-text">乘法（multiplication）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组的幂"><span class="toc-number">2.5.</span> <span class="toc-text">数组的幂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绝对值（absolute-values"><span class="toc-number">2.6.</span> <span class="toc-text">绝对值（absolute values)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组除法（Array-division）"><span class="toc-number">2.7.</span> <span class="toc-text">数组除法（Array division）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#矩阵函数"><span class="toc-number">3.</span> <span class="toc-text">矩阵函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#绘图功能"><span class="toc-number">4.</span> <span class="toc-text">绘图功能</span></a></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="post-block" itemscope itemtype="http://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://www.francc.top/2020/05/08/MATLLAB%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97%EF%BC%88%E4%B8%80%EF%BC%89/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="Yindc"><meta itemprop="description" content="MATLLAB学习日志（一）"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="francc!!"></span><header class="post-header"><h1 class="post-title" itemprop="name headline" style="color: undefined">MATLLAB学习日志（一）</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="创建时间：2020-05-08 18:47:42" itemprop="dateCreated datePublished" datetime="2020-05-08T18:47:42+08:00">2020-05-08</time></div><div class="post-classify"></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content post-markdown"><h1 id="工作空间与使用帮助"><a href="#工作空间与使用帮助" class="headerlink" title="工作空间与使用帮助"></a>工作空间与使用帮助</h1><ul>
+<li><p>clear:清除工作空间中的所有变量</p>
+</li>
+<li><p>clear 变量名：清除指定的变量</p>
+</li>
+<li><p>永久常数：</p>
+<ul>
+<li>pi：圆周率π</li>
+<li>inf：无限大</li>
+<li>ans：用于显示结果的缺省变量名</li>
+</ul>
+</li>
+<li><p>save filename variables保存变量在文件filename.mat中</p>
+</li>
+<li><p>load filename variables调用文件filename.mat中的变量到MATLAB工作空间中</p>
+</li>
+<li><p>help ‘function name’：查询该函数的用法，比如help inv是用来查询计算反矩阵的用法</p>
+</li>
+<li><p>helpwin：帮助窗口</p>
+</li>
+<li><p>demo:示例窗口，MATLAB有丰富的示例供学习参考</p>
+</li>
+</ul>
+<h1 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h1><h2 id="书写向量（vectors）与矩阵（matrices）"><a href="#书写向量（vectors）与矩阵（matrices）" class="headerlink" title="书写向量（vectors）与矩阵（matrices）"></a>书写向量（vectors）与矩阵（matrices）</h2><ul>
+<li><pre><code class="matlab">t=[<span class="number">5</span>:<span class="number">-1</span>:<span class="number">2</span>]        <span class="comment">%产生行向量,从5到2间隔为-1</span>
+x=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">-4</span> <span class="number">-5</span>]    <span class="comment">%或x=[1,2,3,-4,-5]表示行向量</span>
+x=[<span class="number">1</span>;<span class="number">2</span>;<span class="number">3</span>;<span class="number">-4</span>;<span class="number">-5</span>]    <span class="comment">%用分号表示列向量</span>
+输入矩阵：A=[<span class="number">1.2</span> <span class="number">10</span> <span class="number">15</span>;<span class="number">3</span> <span class="number">5.5</span> <span class="number">2</span>;<span class="number">4</span> <span class="number">6.8</span> <span class="number">7</span>]
+如果在矩阵A后面加上分号;取消打印
+A(<span class="built_in">i</span>,:)第<span class="built_in">i</span>行,A(:,<span class="built_in">j</span>)第<span class="built_in">j</span>列
+y=x'            <span class="comment">%表示x的反转矩阵为y</span>
+&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
+</li>
+<li><p><code>diag(n:m)</code>n≤m，产生一个对角元素为从n到m的m-n+1阶对角矩阵，若n=m则产生一个元素为n的一阶矩阵</p>
+</li>
+</ul>
+<h2 id="时间与日期"><a href="#时间与日期" class="headerlink" title="时间与日期"></a>时间与日期</h2><ul>
+<li><code>clock</code>：产生包含年、月、日、时、分、秒的行向量</li>
+<li><code>date</code>：当前日期</li>
+</ul>
+<h2 id="加法与减法（addition-and-subtraction"><a href="#加法与减法（addition-and-subtraction" class="headerlink" title="加法与减法（addition and subtraction)"></a>加法与减法（addition and subtraction)</h2><ul>
+<li><p><code>A=[2 3;4 5;6 7];B=[1 0;2 3;0 4];C=A+B</code></p>
+</li>
+<li><p><code>x=[5;4;6];y=x-1</code></p>
+</li>
+</ul>
+<h2 id="乘法（multiplication）"><a href="#乘法（multiplication）" class="headerlink" title="乘法（multiplication）"></a>乘法（multiplication）</h2><ul>
+<li><pre><code class="matlab">x=[<span class="number">1</span>;<span class="number">2</span>;<span class="number">3</span>]
+y=[<span class="number">4</span>;<span class="number">5</span>;<span class="number">6</span>]
+z=x'*y
+u=x*y'
+v=y*x'
+&lt;!--￼<span class="number">1</span>--&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="数组的幂"><a href="#数组的幂" class="headerlink" title="数组的幂"></a>数组的幂</h2><p>同数组相乘一样，对矩阵或向量的元素求幂，表示为.^</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">y=x.^<span class="number">2</span></span><br><span class="line">A=[<span class="number">1</span>+<span class="built_in">j</span> <span class="number">2</span><span class="number">-2</span>*<span class="built_in">j</span>;<span class="number">3</span>+<span class="number">4</span>*<span class="built_in">j</span> <span class="number">5</span>-<span class="built_in">j</span>]</span><br><span class="line">B=A.^<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="绝对值（absolute-values"><a href="#绝对值（absolute-values" class="headerlink" title="绝对值（absolute values)"></a>绝对值（absolute values)</h2><p>复数的绝对值等于实部平方与虚部平方的和再开平方根</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">abs</span>(A)=<span class="built_in">sqrt</span>(<span class="built_in">real</span>(A).^<span class="number">2</span>+<span class="built_in">imag</span>(A).^<span class="number">2</span>)</span><br><span class="line">A=[<span class="number">2</span>+<span class="number">2</span>*<span class="built_in">i</span> <span class="number">1</span>+<span class="number">3</span>*<span class="built_in">j</span>;<span class="number">4</span>+<span class="number">5</span>*<span class="built_in">j</span> <span class="number">6</span>-<span class="built_in">j</span>]</span><br><span class="line"><span class="built_in">abs</span>(A)</span><br><span class="line"><span class="built_in">angle</span>(A)</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组除法（Array-division）"><a href="#数组除法（Array-division）" class="headerlink" title="数组除法（Array division）"></a>数组除法（Array division）</h2><ul>
+<li><p>数组相除为左除./与右除.\    A除以B    A./B    B除以A    A.\B</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">y=[<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]</span><br><span class="line">u=x./y</span><br><span class="line">v=x.\y</span><br><span class="line">A=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>;<span class="number">1</span> <span class="number">9</span> <span class="number">8</span>]</span><br><span class="line">B=[<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>;<span class="number">7</span> <span class="number">6</span> <span class="number">5</span>]</span><br><span class="line">C=A./B</span><br><span class="line">D=A.\B</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>除法中要注意分母为0时，MATLAB会给出警告</p>
+</li>
+</ul>
+<h1 id="矩阵函数"><a href="#矩阵函数" class="headerlink" title="矩阵函数"></a>矩阵函数</h1><ul>
+<li><p>特征值与特征向量（Eigenvalues and eigenvectors）</p>
+<ul>
+<li><p>A是一个n×n矩阵，具有n个特征值满足<br>$$<br>Ax=\lambda x<br>$$<br>特征值λ在MATLAB中的计算函数为</p>
+<p>​            <code>eig(A)    %产生一个列向量表示特征值</code></p>
+<p>如果A是实数并且对称的，那么特征值为实数，如果A不是对称的，特征值经常是复数：</p>
+<p><code>A=[0 1 0;-1 0 2;3 0 5];eig(A)    %A矩阵，求A的特征值</code></p>
+</li>
+<li><p>根据公式<br>$$<br>AX=XD<br>$$<br>这里D为矩阵形式的特征值，X为矩阵形式的特征向量</p>
+<p><code>A=[0 1 0;0 0 1;-6 -11 -6];[X D]=eig(A)</code></p>
+</li>
+</ul>
+</li>
+<li><p>特征方程（caracteristic equation）</p>
+<ul>
+<li><p>矩阵的特征方程的根即为矩阵的特征值</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A=[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>;<span class="number">0</span> <span class="number">0</span> <span class="number">1</span>;<span class="number">-6</span> <span class="number">-11</span> <span class="number">-6</span>]</span><br><span class="line">p=poly(A)		<span class="comment">%矩阵A的特征方程，系数列为行向量</span></span><br></pre></td></tr></table></figure>
+
+<p>得到p=[1 6 11 6]表示特征方程的系数，特征方程为：<br>$$<br>s^3+6s^2+11s+6<br>$$<br>计算特征方程p的根：</p>
+<p><code>r=roots(p)</code></p>
+<p>计算矩阵A的特征值</p>
+<p><code>lameda=eig(A)</code></p>
+<p>两者的相等的</p>
+</li>
+<li><p>还可以已知多项式的根，用函数poly(r)求多项式</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r=[<span class="number">-3</span> <span class="number">-2</span> <span class="number">-1</span>]</span><br><span class="line">p=poly(r)		<span class="comment">%poly函数内为向量，则视为根，求其多项式</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>多项式乘积（卷积,convolution）</p>
+<p>将两个多项式系数向量相乘    <code>conv(a,b)</code></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">3</span> <span class="number">10</span> <span class="number">25</span> <span class="number">36</span> <span class="number">50</span>]</span><br><span class="line">b=[<span class="number">1</span> <span class="number">2</span> <span class="number">10</span>]</span><br><span class="line">c=conv(a,b)</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>a(s)=3s^4+10s^3+25s^2+36s+50<br>$$</p>
+<p>$$<br>b(s)=s^2+2s+10<br>$$</p>
+<p>$$<br>c(s)=(3s^4+10s^3+25s^2+36s+50)*(s^2+2s+10)<br>$$</p>
+</li>
+<li><p>多项式相除（解卷积，deconvolution）</p>
+<p>将两个多项式系数向量相除    <code>deconv(a,b)</code></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">3</span> <span class="number">10</span> <span class="number">25</span> <span class="number">36</span> <span class="number">50</span>]</span><br><span class="line">b=[<span class="number">1</span> <span class="number">2</span> <span class="number">10</span>]</span><br><span class="line">[q,r]=deconv(a,b)</span><br></pre></td></tr></table></figure>
+
+<p>q和r是多项式相除得到的商和余数</p>
+<p>得到q=[3 4 -13]，r=[0 0 0 22 180]</p>
+<p>即a(s)=b(s)<em>q(s)+r(s)<br>$$<br>3s^4+10s^3+25^2+36s+50=(s^2+2s+10)</em>(3s^2+4s-13)+22s+180<br>$$</p>
+</li>
+<li><p>矩阵指数运算（matrix exponential）</p>
+<p>函数<code>expm(A)</code>指将矩阵A做指数运算：<br>$$<br>expm(A)=1+A+A^2/2!+A^3/3!+…<br>$$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A=[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>;<span class="number">0</span> <span class="number">0</span> <span class="number">1</span>;<span class="number">-6</span> <span class="number">-11</span> <span class="number">-6</span>]</span><br><span class="line">expm(A)</span><br><span class="line">expm(<span class="built_in">eye</span>(<span class="number">3</span>))		<span class="comment">%3×3单位矩阵的指数矩阵</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>矩阵求逆（inverse of a squart matrix）</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A=[<span class="number">1</span> <span class="number">1</span> <span class="number">2</span>;<span class="number">3</span> <span class="number">4</span> <span class="number">0</span>;<span class="number">1</span> <span class="number">2</span> <span class="number">5</span>]</span><br><span class="line">inv(A)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="绘图功能"><a href="#绘图功能" class="headerlink" title="绘图功能"></a>绘图功能</h1><ul>
+<li><p>二维线型图形：<code>plot</code></p>
+<p>比如，定义时间从0到2π，每隔0.01π取一个时间点，在该时间序列内计算正弦函数y=sin(3*t)的数值，并以时间为x轴，以函数值为y轴，画出时间响应曲线：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">t=[<span class="number">0</span>:<span class="number">0.01</span>*<span class="built_in">pi</span>:<span class="number">2</span>*<span class="built_in">pi</span>];		<span class="comment">%生成时间向量</span></span><br><span class="line">y=<span class="built_in">sin</span>(<span class="number">3</span>*t);</span><br><span class="line"><span class="built_in">plot</span>(t,y)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加网格线，图形标题，x轴标题，y轴标题：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grid;</span><br><span class="line">title(<span class="string">'plot of(sin3t)'</span>);</span><br><span class="line">xlabel(<span class="string">'t(sec)'</span>);</span><br><span class="line">ylabel(<span class="string">'sin(3t)'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在图形上标记文字：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">text(<span class="built_in">pi</span>,<span class="built_in">sin</span>(<span class="number">3</span>*<span class="built_in">pi</span>),<span class="string">'sin3t'</span>)		<span class="comment">%在点(pi,sin(3pi))处标记文字sin3t</span></span><br><span class="line">gtext(<span class="built_in">sin</span>(<span class="number">3</span>t))				<span class="comment">%该命令输入后，产生光标输入文字位置</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>限制x、y轴区域</p>
+<ul>
+<li>在MATLAB绘图中，x轴和y轴的区域是自动选择的，有时需手动选择区域</li>
+<li><code>xlim([0 2*pi]);ylim([-2 2]);    %限定x轴和y轴的范围</code></li>
+</ul>
+</li>
+<li><p>选择图形形状</p>
+<ul>
+<li><p>普通默认为实线图，即将各点用曲线连起来，可以选择其他形状绘图</p>
+</li>
+<li><p>线绘图包括“-实线”，“–短划线”，“:点线”，“-.短划线与点线”：</p>
+<p><code>plot(t,y,&#39;-&#39;,t,2*y,&#39;--&#39;,t,3y,&#39;:&#39;,t,4y,&#39;-.&#39;)</code></p>
+</li>
+<li><p>点绘图包括”+”，”o”，”*”，”x”等，详见help plot</p>
+<p><code>plot(t,y,&#39;-&#39;,t,2*y,&#39;--&#39;,t,3y,&#39;:o&#39;,t,4y,&#39;-.x&#39;)</code></p>
+</li>
+</ul>
+</li>
+<li><p>选择图形颜色</p>
+<p>​    系统默认颜色为蓝色，可以自己选择图形颜色：</p>
+<p>​    red         r;        green     g;        blue    b</p>
+<p>​    white    w;        yellow    y;        magenta    m(紫色)</p>
+<p>​    cyan      c;(青色)black    b</p>
+<p>​    <code>plot(t,y,&#39;-r&#39;,t,2*y,&#39;--+c&#39;,t,3y,&#39;:om&#39;,t,4y,&#39;-.xg&#39;)</code></p>
+</li>
+<li><p>选择线的粗细大小</p>
+<p>​    系统默认为0.5，可以自己加粗线：</p>
+<p>​    <code>plot(t,y,&#39;-r&#39;,t,2*y,&#39;--+c&#39;,t,3*y,&#39;:om&#39;,t,4*y,&#39;-.xg&#39;,&#39;LineWidth&#39;,3)</code></p>
+</li>
+<li><p>在图形上显示希腊字符与符号</p>
+<ul>
+<li><p>显示希腊字符</p>
+<p>α    \alpha;        β    \beta;</p>
+<p>γ    \gamma;     Γ    \Gamma;</p>
+<p>δ    \delta;          Δ    \Delta;</p>
+<p>ω    \omega;      Ω    \Omega;</p>
+<p>σ    \sigma;         Σ    \Sigma;</p>
+<p>Φ    \phi;             ψ    \psi;</p>
+<p>θ    \theta;           ζ    \zeta;</p>
+<p>π    \pi;                 Π    \pi</p>
+<p><code>plot(t,y);text(pi,sin(3*pi),&#39;sin(3\pi)&#39;);</code></p>
+</li>
+<li><p>显示其他数字符号：</p>
+<p>​    ∞    \infinity            ←    \leftarrow</p>
+<p>​    ↑    \uparrow          →    \rightarrow</p>
+<p>​    ↓    \downarrow      °     \circ</p>
+<p>​    ±    \pm</p>
+<p><code>plot(t,y);text(pi,sin(3*pi),&#39;\leftarrowsin(3\pi)&#39;);</code></p>
+</li>
+</ul>
+</li>
+<li><p>变化文字大小与字体</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(t,y);</span><br><span class="line">grid;</span><br><span class="line">title(<span class="string">'plot of sin(3t)'</span>,<span class="string">'Fontsize'</span>,<span class="number">20</span>);</span><br><span class="line">xlabel(<span class="string">'t(sec)'</span>,<span class="string">'Fontangle'</span>,<span class="string">'italic'</span>);</span><br><span class="line">ylabel(<span class="string">'sin(3t)'</span>,<span class="string">'Fontname'</span>,<span class="string">'Times New Roman'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>下标：y_1显示为y_1<br>\上标y^1显示为y^1<br>$$</p>
+</li>
+<li><p>复数数据画图</p>
+<ul>
+<li><p>如果z为复数，<code>plot(z)</code>自动按照实部和虚部画图，即等于<code>plot(real(z),imag(z))</code></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">z=[<span class="number">2</span>+<span class="number">2</span>*<span class="built_in">i</span> <span class="number">3</span>+<span class="number">3</span>*<span class="built_in">j</span> <span class="number">4</span>+<span class="number">5</span>*<span class="built_in">j</span> <span class="number">6</span>+<span class="number">7</span>*<span class="built_in">j</span> <span class="number">7</span>+<span class="number">9</span><span class="built_in">j</span> <span class="number">8</span>+<span class="number">6</span><span class="built_in">j</span> <span class="number">9</span>+<span class="number">5</span><span class="built_in">j</span> <span class="number">10</span>+<span class="built_in">j</span>];</span><br><span class="line"><span class="built_in">plot</span>(z)</span><br><span class="line">xlabel(<span class="string">'real axis'</span>);</span><br><span class="line">ylabel(<span class="string">'imaginary axis'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>极坐标图：<code>polar(theta,rho)</code></p>
+<ul>
+<li><p>theta为角度，rho为半径</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x=[<span class="number">0</span>:<span class="number">0.1</span>*<span class="built_in">pi</span>:<span class="built_in">pi</span>];	<span class="comment">%角度为从0到π，间隔为0.1π</span></span><br><span class="line">y=[<span class="number">0</span>:<span class="number">1</span>:<span class="number">10</span>];			<span class="comment">%半径为从0到10，间隔为1</span></span><br><span class="line">polar(x,y)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>对数图（logarithmic plots）</p>
+<ul>
+<li><p><code>loglog</code>：<br>$$<br>x轴和y轴均使用log_{10}数字变化，即x轴为log_{10}x，y轴为log_{10}y<br>$$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x=[<span class="number">1</span>:<span class="number">1</span>:<span class="number">100</span>];</span><br><span class="line">y=[<span class="number">1</span>:<span class="number">10</span>:<span class="number">1000</span>];</span><br><span class="line">loglog(x,y)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>semilogx</code>：<br>$$<br>x轴用log_{10}变换，但y轴不变<br>$$<br><code>semilogx(x,y)</code></p>
+</li>
+<li><p><code>semilogy</code>：<br>$$<br>x轴不变，y轴用log_{10}变换<br>$$<br><code>semilogy(x,y)</code></p>
+</li>
+</ul>
+</li>
+<li><p>使用多图模式</p>
+<ul>
+<li><p>一个图形窗口可以分为多个小窗，每个小窗单独使用plot绘图<code>subplot(m,n,p)</code>将窗口分为m乘n个子窗口，p代表当前子窗口</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">t=[<span class="number">0</span>:<span class="number">0.01</span>*<span class="built_in">pi</span>:<span class="number">2</span>*<span class="built_in">pi</span>];</span><br><span class="line">y1=<span class="built_in">sin</span>(t);</span><br><span class="line">y2=<span class="built_in">sin</span>(<span class="number">2</span>*t);</span><br><span class="line">y3=<span class="built_in">sin</span>(t)+<span class="built_in">sin</span>(<span class="number">2</span>*t);</span><br><span class="line">y4=<span class="built_in">sin</span>(t)*<span class="built_in">sin</span>(<span class="number">2</span>*t);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,y1);grid;xlabel(<span class="string">'t(sec)'</span>);ylabel(<span class="string">'y_1=sin(t)'</span>);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,y2);grid;xlabel(<span class="string">'t(sec)'</span>);ylabel(<span class="string">'y_2=sin(2t)'</span>);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,y3);grid;xlabel(<span class="string">'t(sec)'</span>);ylabel(<span class="string">'y_3=sin(t)+sin(2t)'</span>);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,y4);grid;xlabel(<span class="string">'t(sec)'</span>);ylabel(<span class="string">'y_4=sin(t)*sin(2t)'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>三维画图</p>
+<ul>
+<li><p>MATLAB可以使用plot3、mesh、surf等进行三位画图，需要三个坐标系变量</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">t=[<span class="number">0</span>:<span class="number">0.1</span>*<span class="built_in">pi</span>:<span class="number">6</span>*<span class="built_in">pi</span>];		<span class="comment">%生成时间向量</span></span><br><span class="line">x=<span class="built_in">cos</span>(t);y=<span class="built_in">sin</span>(t);z=t;	<span class="comment">%z为时间轴，x和y为cos和sin函数</span></span><br><span class="line"><span class="built_in">plot3</span>(x,y,z);grid;		<span class="comment">%三维绘图</span></span><br><span class="line">title(<span class="string">'Three-dimensional coil'</span>);</span><br><span class="line">xlabel(<span class="string">'x-axis'</span>);ylabel(<span class="string">'y-axis'</span>);zlabel(<span class="string">'z-axis'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示三维图形的表面，需要用函数mesh或surf：mesh之画出线的轮廓，并给线赋予颜色，颜色随z轴变化，而surf还给面赋予颜色</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">n=<span class="number">10</span>;[x,y,z]=sphere(n);		<span class="comment">%创建球面</span></span><br><span class="line"><span class="built_in">figure</span> <span class="number">1</span>;mesh (x,y,z);axis(<span class="string">'equal'</span>);title(<span class="string">'Mesh plot'</span>);</span><br><span class="line">xlabel(<span class="string">'x-axis'</span>);ylabel(<span class="string">'y-axis'</span>);zlabel(<span class="string">'z-axis'</span>);</span><br><span class="line"><span class="built_in">figure</span> <span class="number">2</span>;surf(x,y,z);axis(<span class="string">'equal'</span>);title(<span class="string">'Mesh plot'</span>);</span><br><span class="line">xlabel(<span class="string">'x-axis'</span>);ylabel(<span class="string">'y-axis'</span>);zlabel(<span class="string">'z-axis'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>绘制三角波形图</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">u1=[<span class="number">0</span>:<span class="number">0.5</span>:<span class="number">2</span>]';</span><br><span class="line">u2=[<span class="number">1.5</span>:<span class="number">-0.5</span>:<span class="number">-2</span>]';</span><br><span class="line">u3=[<span class="number">-1.5</span>:<span class="number">0.5</span>:<span class="number">0</span>]';</span><br><span class="line">w=[u1;u2;u3];</span><br><span class="line">t=<span class="number">0</span>:<span class="number">0.5</span>:<span class="number">8</span>;</span><br><span class="line"><span class="built_in">plot</span>(t,w);grid;</span><br><span class="line">xlabel(<span class="string">'t'</span>);ylabel(<span class="string">'w'</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Yindc</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="http://www.francc.top/2020/05/08/MATLLAB%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97%EF%BC%88%E4%B8%80%EF%BC%89/" title="MATLLAB学习日志（一）">http://www.francc.top/2020/05/08/MATLLAB%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97%EF%BC%88%E4%B8%80%EF%BC%89/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> 许可协议。</li></ul></section></article><div class="post-nav"><div class="post-nav-item"></div><div class="post-nav-item"><a class="post-nav-next" href="/2020/05/08/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97%EF%BC%88%E4%B8%89%EF%BC%89/" rel="next" title="操作系统学习日志（三）"><span class="post-nav-text">操作系统学习日志（三）</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div id="comment"><div class="comment-tooltip text-center"><span>若您想及时得到回复提醒，建议跳转 GitHub Issues 评论。</span><br><span>若没有本文 Issue，您可以使用 Comment 模版新建。</span><br></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2020 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Yindc</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v4.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v0.6.1</span></div></footer><a class="hty-icon-button" id="goUp" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></div><script defer src="/js/utils.js"></script><script defer src="/js/hexo-theme-yun.js"></script></body></html>

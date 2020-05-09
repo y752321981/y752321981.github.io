@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="MATLAB学习日志（二）"><meta name="keywords" content=""><meta name="author" content="Yindc"><meta name="copyright" content="Yindc"><meta name="theme-color" content="#0078E7"><title>MATLAB学习日志（二） | francc!!</title><link rel="shortcut icon" href="/jk.svg"><link rel="mask-icon" href="/jk.svg" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script id="yun-config">
+    let Yun = window.Yun || {};
+    let CONFIG = {"root":"/","title":"路过的空虚假面","version":"0.6.1","anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
+  </script><script src="//at.alicdn.com/t/font_1140697_n3htx7s57pp.js" async></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><meta name="generator" content="Hexo 4.2.0"></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle sidebar-toggle-fixed hty-icon-button"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><aside class="sidebar"><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc sidebar-nav-active hty-icon-button" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about" title="Yindc"><img loading="lazy" src="/aa12.png" alt="Yindc"></a><div class="site-author-name"><a href="/about/">Yindc</a></div><a class="site-name" href="/about/site.html">francc!!</a><sub class="site-subtitle"></sub><div class="site-desciption"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item site-state-posts"><a href="/archives" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">10</span></a></div><a class="site-state-item hty-icon-button" href="/%E7%A2%8E%E7%A2%8E%E5%BF%B5" title="碎碎念"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-settings-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&amp;uin=752321981&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/y752321981" title="GitHub" target="_blank" style="color:#181717"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:752321981@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.acfun.cn/u/871327" title="ACFUN" target="_blank" style="color:#fd0101"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-send-plane-2-line"></use></svg></a></div></div><script defer src="/js/sidebar.js"></script><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#连续系统模型"><span class="toc-number">1.</span> <span class="toc-text">连续系统模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#多项式传递函数"><span class="toc-number">1.1.</span> <span class="toc-text">多项式传递函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#零极点传递函数"><span class="toc-number">1.2.</span> <span class="toc-text">零极点传递函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多输入多输出的传递函数"><span class="toc-number">1.3.</span> <span class="toc-text">多输入多输出的传递函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#状态方程"><span class="toc-number">1.4.</span> <span class="toc-text">状态方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模型转换"><span class="toc-number">1.5.</span> <span class="toc-text">模型转换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#离散时间系统模型"><span class="toc-number">2.</span> <span class="toc-text">离散时间系统模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#方块图在MATLAB中的运算"><span class="toc-number">3.</span> <span class="toc-text">方块图在MATLAB中的运算</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#控制系统仿真"><span class="toc-number">4.</span> <span class="toc-text">控制系统仿真</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#时域响应分析"><span class="toc-number">4.1.</span> <span class="toc-text">时域响应分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#根轨迹分析"><span class="toc-number">4.2.</span> <span class="toc-text">根轨迹分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#频域响应分析"><span class="toc-number">4.3.</span> <span class="toc-text">频域响应分析</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="post-block" itemscope itemtype="http://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://www.francc.top/2020/05/09/MATLAB%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="Yindc"><meta itemprop="description" content="MATLAB学习日志（二）"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="francc!!"></span><header class="post-header"><h1 class="post-title" itemprop="name headline" style="color: undefined">MATLAB学习日志（二）</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="创建时间：2020-05-09 09:23:52" itemprop="dateCreated datePublished" datetime="2020-05-09T09:23:52+08:00">2020-05-09</time></div><div class="post-classify"></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content post-markdown"><h1 id="连续系统模型"><a href="#连续系统模型" class="headerlink" title="连续系统模型"></a>连续系统模型</h1><h2 id="多项式传递函数"><a href="#多项式传递函数" class="headerlink" title="多项式传递函数"></a>多项式传递函数</h2><p>$$<br>G(s)=\frac{Y(s)}{U(s)}=\frac{num}{den}=\frac{b_0s^m+b_1s^{m-1}+…+b_{m-1}s+b_m}{s^n+a_1s^{n-1}+…+a_{n-1}s+a_n}<br>$$</p>
+<ul>
+<li><p>可以将函数写成分子（numerator）、分母（denominator）两个多项式，每个多项式中的系列作为行向量在MATLAB中写出</p>
+<p><code>num=[b0 b1 ... bn]</code></p>
+<p><code>den=[1 a1 ... an]</code></p>
+<p><code>sys=tf[num,den]</code>                给出以num为分子、den为分母的传递函数</p>
+<p>如：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num=[<span class="number">2</span> <span class="number">5</span> <span class="number">3</span> <span class="number">6</span>];</span><br><span class="line">den=[<span class="number">1</span> <span class="number">6</span> <span class="number">11</span> <span class="number">6</span>];</span><br><span class="line">sys1=tf(num,den)</span><br><span class="line">PRINTSYS(num,den,<span class="string">'p'</span>)		<span class="comment">%打印传递函数，算子为p</span></span><br><span class="line">PRINTSYS(num,den,<span class="string">'s'</span>)		<span class="comment">%打印传递函数，算子为s</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用分式相除指令residue可以将传递函数进行部分分式展开：</p>
+<p><code>[r,p,k]=residue(num,den)</code></p>
+<p>r表示分子，p表示分母中的极点，k表示剩余量。</p>
+<p><code>num=[b0 b1 ... bn]</code></p>
+<p><code>den=[1 a1 ... an]</code><br>$$<br>\frac{num}{den}=\frac{2s^3+5s^2+3s+6}{s^3+6s^2+11s+6}<br>$$<br><code>r=[-6 -4 3]</code></p>
+<p><code>p=[-3 -2 -1]</code></p>
+<p><code>k=2</code><br>$$<br>\frac{2s^3+5s^2+3s+6}{s^3+6s^2+11s+6}=\frac{-6}{s+3}+\frac{-4}{s+2}+\frac3{s+1}+2<br>$$</p>
+</li>
+</ul>
+<h2 id="零极点传递函数"><a href="#零极点传递函数" class="headerlink" title="零极点传递函数"></a>零极点传递函数</h2><ul>
+<li><p>零极点形式的传递函数首先要已知三个数值：</p>
+<ul>
+<li><p>零点的行向量，z=[…]</p>
+</li>
+<li><p>极点的行向量，p=[…]</p>
+</li>
+<li><p>增益值，k</p>
+<p><code>z=[-3 -1]; p=[0 -2 -4 -6]; k=4</code></p>
+<p><code>sys2=zpk(z,p,k)</code></p>
+</li>
+</ul>
+</li>
+<li><p>零极点传递函数转化为多项式传递函数：</p>
+<p><code>systf=tf(sys2)</code></p>
+</li>
+<li><p>多项式传递函数转化为零极点传递函数：</p>
+<p><code>syszpk=zpk(systf)</code></p>
+</li>
+</ul>
+<h2 id="多输入多输出的传递函数"><a href="#多输入多输出的传递函数" class="headerlink" title="多输入多输出的传递函数"></a>多输入多输出的传递函数</h2><ul>
+<li><p>2输入2输出的传递函数</p>
+<p><code>H=tf({-5;[1 -5 6]},{[1 -1];[1 1 0]})</code><br>$$<br>H=\begin{bmatrix}\frac{-5}{s-1} \ \frac{s^2-5s+6}{s^2+s} \end{bmatrix}<br>$$</p>
+</li>
+<li><p>转化为零极点形式：<code>H_zpk=zpk(H)</code></p>
+<p>用零极点形式输入：</p>
+<p><code>H_zpk=zpk({0;[3 2]},{1;[0 -1]},[-5;1])</code></p>
+</li>
+</ul>
+<h2 id="状态方程"><a href="#状态方程" class="headerlink" title="状态方程"></a>状态方程</h2><ul>
+<li><p><code>sys=ss(A,B,C,D)</code>产生一个连续时间状态空间模型，矩阵参数为给定的A B C D</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A=[<span class="number">-6</span> <span class="number">-5</span> <span class="number">-10</span>;<span class="number">1</span> <span class="number">0</span> <span class="number">0</span>;<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>];</span><br><span class="line">B=[<span class="number">1</span>;<span class="number">0</span>;<span class="number">0</span>];</span><br><span class="line">C=[<span class="number">0</span> <span class="number">10</span> <span class="number">10</span>];</span><br><span class="line">D=<span class="number">0</span>;</span><br><span class="line">sys_ss=ss(A,B,C,D)</span><br><span class="line">sys_tf=tf(sys_ss)		<span class="comment">%转换成tf形式</span></span><br><span class="line">sys_zpk=zpk(sys_ss)		<span class="comment">%转换成zpk形式</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="模型转换"><a href="#模型转换" class="headerlink" title="模型转换"></a>模型转换</h2><ul>
+<li><p>以上提到的转换函数只给出了模型打印形式，并没有给出具体的A B C D或num、den、zpk具体数值，为了方便与分析系统的特性，下面给出三种模型的转换方法：</p>
+<ul>
+<li><p>传递函数转换为状态方程：</p>
+<p><code>[A,B,C,D]=tf2ss(num,den)</code></p>
+</li>
+<li><p>传递函数转换为零极点形式：</p>
+<p><code>[z,p,k]=tf2ss(num,den)</code></p>
+</li>
+<li><p>例[4.1]：考虑到如下传递函数，在MATLAB中写出零极点函数和状态方程<br>$$<br>G(s)=\frac{10s+10}{s^3+6s^2+5s+10}<br>$$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">num=[<span class="number">10</span> <span class="number">10</span>];</span><br><span class="line">den=[<span class="number">1</span> <span class="number">6</span> <span class="number">5</span> <span class="number">10</span>];</span><br><span class="line">sys_tf=tf(num,den);</span><br><span class="line">[A,B,C,D]=tf2ss(num,den);	<span class="comment">%将tf形式转换为ss形式</span></span><br><span class="line">sys_ss=ss(A,B,C,D);</span><br><span class="line">[z,p,k]=tf2zp(num,den);		<span class="comment">%将zpk形式转换为tf形式</span></span><br><span class="line">sys_zpk=zpk(z,p,k)</span><br></pre></td></tr></table></figure>
+
+<p><img src="image%5CMATLAB%E4%BE%8B4.1.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="离散时间系统模型"><a href="#离散时间系统模型" class="headerlink" title="离散时间系统模型"></a>离散时间系统模型</h1><ul>
+<li><p><code>sysd=c2d(sys,Ts,method)</code></p>
+<p>连续系统为sys，Ts为采样时间，method为采用的保持器，默认为零阶保持器，’zoh’，默认情况下可以去掉method</p>
+<p>还有三角形近似和双线性近似：’for’’tustin’</p>
+</li>
+<li><p><code>[G,H]=c2d(A,B,Ts0)</code></p>
+<p>A和B为状态方程G和H为离散化状态方程矩阵</p>
+</li>
+</ul>
+<p>矩阵，Ts采样时间，默认零阶保持器，输出</p>
+<p>[例4.3]考虑系统：<br>$$<br>H(s)=\frac{s-1}{s^2+4s+5}<br>$$<br>带有输入延迟Td=0.35s，用三角形近似方法离散化，采样时间为0.1s，写出离散化的传递函数模型。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">H=tf([<span class="number">1</span> <span class="number">-1</span>],[<span class="number">1</span> <span class="number">4</span> <span class="number">5</span>],<span class="string">'inputdelay'</span>,<span class="number">0.35</span>)	<span class="comment">%系统延迟0.35s</span></span><br><span class="line">Hd=c2d(H,<span class="number">0.1</span>,<span class="string">'foh'</span>)</span><br><span class="line">step(H,<span class="string">'-'</span>,Hd,<span class="string">'--'</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="image%5CMATLAB%E4%BE%8B4.3.png" alt="" loading="lazy"></p>
+<h1 id="方块图在MATLAB中的运算"><a href="#方块图在MATLAB中的运算" class="headerlink" title="方块图在MATLAB中的运算"></a>方块图在MATLAB中的运算</h1><ul>
+<li><p>串行连接方块图</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sys1=tf(num1,den1)</span><br><span class="line">sys2=tf(num2,den2)</span><br><span class="line">sys=series(sys1,sys2)</span><br><span class="line"></span><br><span class="line">sys1=ss(A1,B1,C1,D1)</span><br><span class="line">sys2=ss(A2,B2,C2,D2)</span><br><span class="line">sys=series(sys1,sys2)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>并行连接方块图</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sys1=tf(num1,den1)</span><br><span class="line">sys2=tf(num2,den2)</span><br><span class="line">sys=parallel(sys1,sys2)</span><br><span class="line"></span><br><span class="line">sys1=ss(A1,B1,C1,D1)</span><br><span class="line">sys2=ss(A2,B2,C2,D2)</span><br><span class="line">sys=parallel(sys1,sys2)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>反馈连接方块图</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">G=tf(numg,deng)</span><br><span class="line">H=tf(numh,denh)</span><br><span class="line">sys=feedback(G,H)		<span class="comment">%默认为负反馈</span></span><br><span class="line">sys=feedback(G,H,+<span class="number">1</span>)	<span class="comment">%正反馈</span></span><br><span class="line">或	sys=feedback(G,-H)</span><br><span class="line"></span><br><span class="line">sys1=ss(A1,B1,C1,D1)</span><br><span class="line">sys2=ss(A2,B2,C2,D2)</span><br><span class="line">sys=feedback(sys1,sys2)</span><br></pre></td></tr></table></figure>
+
+<p>[例4.5]考虑如下系统，用MATLAB计算出闭环传递函数</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sys1=feedback(zpk([],[<span class="number">-1</span> <span class="number">-8</span>],<span class="number">2</span>),<span class="number">0.2</span>)</span><br><span class="line">sys2=series([<span class="number">4</span>],sys1)</span><br><span class="line">sys3=series(sys2,tf([<span class="number">1</span>],[<span class="number">1</span> <span class="number">0</span>]))</span><br><span class="line">sys=feedback(sys3,[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>零极点对消</p>
+<ul>
+<li><p>当计算较为复杂的传递函数时，闭环传递函数可能有相同或相近的零极点，可以使用零极点对消来得到最小阶次系统</p>
+</li>
+<li><p>​    函数命令为      <code>minreal()</code></p>
+<p>例如如下传递函数，使用零极点对消：<br>$$<br>G(s)=\frac{s^2+3s+2}{s^3+8s^2+19s+12}<br>$$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num=[<span class="number">1</span> <span class="number">3</span> <span class="number">2</span>]</span><br><span class="line">den=[<span class="number">1</span> <span class="number">8</span> <span class="number">19</span> <span class="number">12</span>]</span><br><span class="line">sys=tf(num,den)</span><br><span class="line">sys_min=minreal(sys)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="控制系统仿真"><a href="#控制系统仿真" class="headerlink" title="控制系统仿真"></a>控制系统仿真</h1><h2 id="时域响应分析"><a href="#时域响应分析" class="headerlink" title="时域响应分析"></a>时域响应分析</h2><ul>
+<li><p>在时域中，系统对某些特定输入的响应，这些响应曲线表示出的一些参数可以用来描述系统的性能</p>
+<ul>
+<li>脉冲响应</li>
+<li>阶跃响应</li>
+<li>斜坡响应</li>
+</ul>
+</li>
+<li><p>阶跃响应（step response）：<code>step(sys) 或 step(num,den)</code></p>
+<ul>
+<li><p>给出的标准二阶传递函数：<br>$$<br>G(s)=\frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega^2}<br>\\omega_n=5rad/s,\xi=0.4<br>$$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wn=<span class="number">5</span>;</span><br><span class="line">damping_ratio=<span class="number">0.4</span>;</span><br><span class="line">sys=tf(<span class="number">25</span>,[<span class="number">1</span> <span class="number">2</span>*<span class="number">0.4</span>*<span class="number">5</span> <span class="number">25</span>])</span><br><span class="line">sys=tf(<span class="number">25</span>,[<span class="number">1</span> <span class="number">2</span>*<span class="number">0.4</span>*<span class="number">5</span> <span class="number">25</span>])</span><br><span class="line">step(sys)</span><br><span class="line">t=[<span class="number">0</span>:<span class="number">0.1</span>:<span class="number">6</span>];</span><br><span class="line">step(sys,t);grid</span><br><span class="line">title(<span class="string">'unit step response'</span>,<span class="string">'Fontsize'</span>,<span class="number">20</span>);</span><br><span class="line">xlabel(<span class="string">'t'</span>,<span class="string">'Fontsize'</span>,<span class="number">10</span>);ylabel(<span class="string">'output y'</span>,<span class="string">'Fontsize'</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>[例4.6]得到如下系统的阶跃响应：<br>$$<br>\begin{bmatrix} \dot x_1\ \dot x_2\end{bmatrix}=\begin{bmatrix} -1&amp;-1\6.5&amp;0\end{bmatrix}\begin{bmatrix} x_1\x_2\end{bmatrix}+\begin{bmatrix}1&amp;1\1&amp;0 \end{bmatrix}\begin{bmatrix} u_1\u_2\end{bmatrix}<br>\\begin{bmatrix} y_1\y_2\end{bmatrix}=\begin{bmatrix}1&amp;0\0&amp; 1\end{bmatrix}\begin{bmatrix}x_1\x_2 \end{bmatrix}+\begin{bmatrix} 0&amp;0\0&amp;0\end{bmatrix}\begin{bmatrix}u_1\u_2 \end{bmatrix}<br>$$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">A=[<span class="number">-1</span> <span class="number">-1</span>;<span class="number">6.5</span> <span class="number">0</span>];</span><br><span class="line">B=[<span class="number">1</span> <span class="number">1</span>;<span class="number">1</span> <span class="number">0</span>];</span><br><span class="line">C=[<span class="number">1</span> <span class="number">0</span>;<span class="number">0</span> <span class="number">1</span>];</span><br><span class="line">D=[<span class="number">0</span> <span class="number">0</span>;<span class="number">0</span> <span class="number">0</span>];</span><br><span class="line">step(A,B,C,D)</span><br><span class="line"></span><br><span class="line">step(A,B,C,D,<span class="number">1</span>);grid;</span><br><span class="line">title(<span class="string">'Step response plots:Input=u_1(u_2=0)'</span>)</span><br><span class="line">text(<span class="number">3.4</span>,<span class="number">-0.05</span>,<span class="string">'Y1'</span>)</span><br><span class="line">text(<span class="number">3.4</span>,<span class="number">1.4</span>,<span class="string">'Y2'</span>)</span><br><span class="line"></span><br><span class="line">step(A,B,C,D,<span class="number">2</span>);grid;</span><br><span class="line">title(<span class="string">'Step response plots:Input=u_2(u_1=0)'</span>)</span><br><span class="line">text(<span class="number">3</span>,<span class="number">0.14</span>,<span class="string">'Y1'</span>)</span><br><span class="line">text(<span class="number">2.8</span>,<span class="number">1.1</span>,<span class="string">'Y2'</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="image%5CMATLAB%E4%BE%8B4.6.png" alt="" loading="lazy"></p>
+<p><img src="image%5CMATLAB%E4%BE%8B4.6(1).png" alt="" loading="lazy"></p>
+<p><img src="image%5CMATLAB%E4%BE%8B4.6(2).png" alt="" loading="lazy"></p>
+<h2 id="根轨迹分析"><a href="#根轨迹分析" class="headerlink" title="根轨迹分析"></a>根轨迹分析</h2><p>$$<br>\frac{C(s)}{R(s)}=\frac{G(s)}{1+G(s)H(s)}<br>$$</p>
+<p>开环传递函数为G(s)，闭环传递函数的特征方程为1+G(s)H(s)=0</p>
+<p>一般情况下，H(s)=1，G(s)用传递函数来表示，可以将特征方程写为：<br>$$<br> 1+\frac{K(s+z_1)(s+z_2)…(s+z_m)}{(s+p_1)(s+p_2)…(s+p_n)}=0<br>$$<br>闭环传递函数与开环传递函数相比，零点不变，极点则被重新配置，可以选择不同的K值来配置极点，做出从K=0到K趋于无穷的根轨迹图</p>
+<ul>
+<li><p>根轨迹绘图：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rlocus(num,den)		<span class="comment">%K值由系统自动取值</span></span><br><span class="line">rlocus(A,B,C,D)</span><br><span class="line">rlocus(num,den,K)	<span class="comment">%给定增益值K</span></span><br><span class="line">rlocus(A,B,C,D,K)</span><br><span class="line">[r,K]=rlous(sys)	<span class="comment">%得到矩阵r与行向量K，K为变化的增益值向量，r为K行与n列的矩阵，n为分母的阶次，即每一行对应于一个K值，在该K值下n个根的具体数值</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>[例4.9]用MATLAB做出以下传递函数的根轨迹图：</p>
+<p><img src="image%5CMATLAB%E4%BE%8B4.9.png" alt="" loading="lazy"></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">num=[<span class="number">1</span> <span class="number">3</span>];</span><br><span class="line">den=conv([<span class="number">1</span> <span class="number">1</span> <span class="number">0</span>],[<span class="number">1</span> <span class="number">4</span> <span class="number">16</span>]);</span><br><span class="line">r=rlocus(num,den);</span><br><span class="line"><span class="built_in">plot</span>(r);grid;</span><br><span class="line">axis([<span class="number">-6</span> <span class="number">6</span> <span class="number">-6</span> <span class="number">6</span>]);</span><br><span class="line">title(<span class="string">'Root-locus plot of G(s)=K(s+3)/[s(s+1)(s^2)+4s+16]'</span>);</span><br><span class="line">xlabel(<span class="string">'Real axis'</span>);</span><br><span class="line">ylabel(<span class="string">'Imag axis'</span>);</span><br><span class="line">gtext(<span class="string">'o'</span>);</span><br><span class="line">gtext(<span class="string">'x'</span>);</span><br><span class="line">gtext(<span class="string">'x'</span>);</span><br><span class="line">gtext(<span class="string">'x'</span>);</span><br><span class="line">gtext(<span class="string">'x'</span>);</span><br></pre></td></tr></table></figure>
+
+<p><img src="image%5CMATLAB%E4%BE%8B4.9(1).png" alt="" loading="lazy"></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">num=[<span class="number">1</span> <span class="number">3</span>];</span><br><span class="line">den=conv([<span class="number">1</span> <span class="number">1</span> <span class="number">0</span>],[<span class="number">1</span> <span class="number">4</span> <span class="number">16</span>]);</span><br><span class="line">r=rlocus(num,den);</span><br><span class="line"><span class="built_in">plot</span>(r,<span class="string">'o'</span>);	<span class="comment">%更为清楚的看到系统生成的K值数目</span></span><br><span class="line">grid;</span><br><span class="line">axis([<span class="number">-6</span> <span class="number">6</span> <span class="number">-6</span> <span class="number">6</span>]);</span><br><span class="line">title(<span class="string">'Root-locus plot of G(s)=K(s+3)/[s(s+1)(s^2+4s+16)]'</span>);</span><br><span class="line">xlabel(<span class="string">'Real axis'</span>);</span><br><span class="line">ylabel(<span class="string">'Imag axis'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%或自己定义K值</span></span><br><span class="line">K=[<span class="number">0</span>:<span class="number">0.1</span>:<span class="number">1000</span>];</span><br><span class="line">r=rlocus=(num,den,K);</span><br><span class="line"><span class="built_in">plot</span>(r,<span class="string">'o'</span>);grid;</span><br><span class="line">axis([<span class="number">-6</span> <span class="number">6</span> <span class="number">-6</span> <span class="number">6</span>]);</span><br></pre></td></tr></table></figure>
+
+<p><img src="image%5CMATLAB%E4%BE%8B4.9(2).png" alt="" loading="lazy"></p>
+<p><img src="image%5CMATLAB%E4%BE%8B4.9(3).png" alt="自定义K值" loading="lazy"></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num=[<span class="number">1</span>]; den=[<span class="number">1</span> <span class="number">4</span> <span class="number">5</span> <span class="number">0</span>];</span><br><span class="line">K=[<span class="number">0</span>:<span class="number">0.001</span>:<span class="number">100</span>];</span><br><span class="line">r=rlocus(num,den,K); </span><br><span class="line"><span class="built_in">plot</span>(r); grid; </span><br><span class="line">axis([<span class="number">-3</span> <span class="number">1</span> <span class="number">-2</span> <span class="number">2</span>]);</span><br><span class="line">sgrid([<span class="number">0.5</span> <span class="number">0.707</span>],[<span class="number">0.5</span> <span class="number">1</span> <span class="number">2</span>]);</span><br><span class="line">title(‘Root-locus <span class="built_in">plot</span> with \zeta=<span class="number">0.5</span> and <span class="number">0.707</span> lines and \omega_n=<span class="number">0.5</span>,<span class="number">1</span> and <span class="number">2</span> circles’);</span><br><span class="line">xlabel(‘Real axis’);</span><br><span class="line">ylabel(‘Imag axis’);</span><br><span class="line">gtext(‘\omega_n=<span class="number">2</span>’); gtext(‘\omega_n=<span class="number">1</span>’); gtext(‘\omega_n=<span class="number">0.5</span>’);</span><br><span class="line">gtext(‘x’);gtext(‘x’);gtext(‘x’);</span><br></pre></td></tr></table></figure>
+
+<p><img src="image%5CMATLAB%E4%BE%8B4.9(4).png" alt="" loading="lazy"></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">num=[<span class="number">1</span>]; den=[<span class="number">1</span> <span class="number">4</span> <span class="number">5</span> <span class="number">0</span>];</span><br><span class="line">K=[<span class="number">0</span>:<span class="number">0.001</span>:<span class="number">100</span>];</span><br><span class="line">r=rlocus(num,den,K); </span><br><span class="line"><span class="built_in">plot</span>(r); grid; </span><br><span class="line">axis([<span class="number">-3</span> <span class="number">1</span> <span class="number">-2</span> <span class="number">2</span>]);</span><br><span class="line">sgrid([<span class="number">0.5</span>],[]);</span><br><span class="line">xlabel(‘Real axis’);</span><br><span class="line">ylabel(‘Imag axis’);</span><br><span class="line"></span><br><span class="line">[K,r]=rlocfind(num,den)</span><br></pre></td></tr></table></figure>
+
+<p><img src="image%5CMATLAB%E4%BE%8B4.9(5).png" alt="" loading="lazy"></p>
+<h2 id="频域响应分析"><a href="#频域响应分析" class="headerlink" title="频域响应分析"></a>频域响应分析</h2><ul>
+<li><p>波特图绘制</p>
+<p><code>bode(num,den)        %直接画出波特图</code></p>
+<p><code>bode(num,den)        %w为用户定义的对数坐标</code></p>
+<p><code>[mag,phase,w]=bode(num,den)        %不画图，输出矩阵：幅值，相角与对应的对数坐标</code></p>
+<p>如考虑如下传递函数的波特图：<br>$$<br>G(s)=\frac{25}{s^2+4s+25}<br>$$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num=[<span class="number">25</span>];den=[<span class="number">1</span> <span class="number">4</span> <span class="number">25</span>];</span><br><span class="line">bode(num,den);grid;</span><br><span class="line">title(<span class="string">'Bode diagram of G(s)=25/(s^2+4s+25)'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>控制系统设计</p>
+<p><code>ltiview        %功能强大，使用方便的控制系统设计器</code></p>
+</li>
+</ul>
+</div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Yindc</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="http://www.francc.top/2020/05/09/MATLAB%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/" title="MATLAB学习日志（二）">http://www.francc.top/2020/05/09/MATLAB%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> 许可协议。</li></ul></section></article><div class="post-nav"><div class="post-nav-item"></div><div class="post-nav-item"><a class="post-nav-next" href="/2020/05/08/MATLAB%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97%EF%BC%88%E4%B8%80%EF%BC%89/" rel="next" title="MATLAB学习日志（一）"><span class="post-nav-text">MATLAB学习日志（一）</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div id="comment"><div class="comment-tooltip text-center"><span>若您想及时得到回复提醒，建议跳转 GitHub Issues 评论。</span><br><span>若没有本文 Issue，您可以使用 Comment 模版新建。</span><br></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2020 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Yindc</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v4.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v0.6.1</span></div></footer><a class="hty-icon-button" id="goUp" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></div><script defer src="/js/utils.js"></script><script defer src="/js/hexo-theme-yun.js"></script></body></html>
